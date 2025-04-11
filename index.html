@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherSphere Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo">
+                <i class="fas fa-cloud-sun"></i>
+                <h1>WeatherSphere Pro</h1>
+            </div>
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="location-input" placeholder="Search for a city..." autocomplete="off">
+                    <button id="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="location-suggestions" id="suggestions"></div>
+            </div>
+        </header>
+
+        <main class="dashboard">
+            <section class="weather-display" id="weather-display">
+                <div class="current-weather" id="current-weather">
+                    <div class="welcome-message">
+                        <h2>Welcome to WeatherSphere Pro</h2>
+                        <p>Enter a location to view detailed weather information</p>
+                    </div>
+                </div>
+
+                <div class="weather-controls">
+                    <h3><i class="fas fa-sliders-h"></i> Display Options</h3>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="checkbox" name="weather-option" value="temp" checked>
+                            <div class="option-content">
+                                <i class="fas fa-temperature-high"></i>
+                                <span>Temperature</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="checkbox" name="weather-option" value="feels_like" checked>
+                            <div class="option-content">
+                                <i class="fas fa-temperature-low"></i>
+                                <span>Feels Like</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="checkbox" name="weather-option" value="humidity" checked>
+                            <div class="option-content">
+                                <i class="fas fa-tint"></i>
+                                <span>Humidity</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="checkbox" name="weather-option" value="pressure" checked>
+                            <div class="option-content">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Pressure</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="checkbox" name="weather-option" value="wind" checked>
+                            <div class="option-content">
+                                <i class="fas fa-wind"></i>
+                                <span>Wind</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="checkbox" name="weather-option" value="visibility" checked>
+                            <div class="option-content">
+                                <i class="fas fa-eye"></i>
+                                <span>Visibility</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="checkbox" name="weather-option" value="sunrise" checked>
+                            <div class="option-content">
+                                <i class="fas fa-sun"></i>
+                                <span>Sunrise</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="checkbox" name="weather-option" value="sunset" checked>
+                            <div class="option-content">
+                                <i class="fas fa-moon"></i>
+                                <span>Sunset</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="weather-details" id="weather-details">
+                <!-- Dynamic content will be inserted here -->
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>© 2023 WeatherSphere Pro | Powered by OpenWeatherMap</p>
+        </footer>
+    </div>
+
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
